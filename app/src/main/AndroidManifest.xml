@@ -22,6 +22,11 @@
             android:enabled="true"
             android:exported="true" >
         </service>
+
+        <activity
+            android:name=".Introduction"
+            android:label="@string/title_activity_introduction" >
+        </activity>
     </application>
 
 </manifest>
