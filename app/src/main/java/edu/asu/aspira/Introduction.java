@@ -6,14 +6,20 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 
 public class Introduction extends ActionBarActivity {
 
     private TextView[] its;
-    private Button btn;
+    private TextView nameTitle;
+    private Button signUpBtn, backBtn, nextBtn, randomBtn;
+    private ViewFlipper viewFlipper;
+    private EditText nameInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +38,26 @@ public class Introduction extends ActionBarActivity {
         its[7] = (TextView)findViewById(R.id.introTitleText8);
         its[8] = (TextView)findViewById(R.id.introTitleText9);
         its[9] = (TextView)findViewById(R.id.introTitleText10);
-        btn = (Button)findViewById(R.id.signUpBtn);
+        nameTitle = (TextView)findViewById(R.id.nameTitle);
+        nameInput = (EditText)findViewById(R.id.nameInput);
+        signUpBtn = (Button)findViewById(R.id.signUpBtn);
+        backBtn = (Button)findViewById(R.id.backBtn);
+        nextBtn = (Button)findViewById(R.id.nextBtn);
+        randomBtn = (Button)findViewById(R.id.randomBtn);
+        viewFlipper = (ViewFlipper)findViewById(R.id.introViewFlipper);
+
+        viewFlipper.setInAnimation(this, R.anim.abc_fade_in);
+        viewFlipper.setOutAnimation(this, R.anim.abc_fade_out);
 
         for(int x = 0; x < its.length; x++){
             its[x].setTypeface(Typeface.createFromAsset(getAssets(), "LuckiestGuy.ttf"));
         }
-        btn.setTypeface(Typeface.createFromAsset(getAssets(), "LuckiestGuy.ttf"));
+        signUpBtn.setTypeface(Typeface.createFromAsset(getAssets(), "LuckiestGuy.ttf"));
+        backBtn.setTypeface(Typeface.createFromAsset(getAssets(), "LuckiestGuy.ttf"));
+        nextBtn.setTypeface(Typeface.createFromAsset(getAssets(), "LuckiestGuy.ttf"));
+        randomBtn.setTypeface(Typeface.createFromAsset(getAssets(), "LuckiestGuy.ttf"));
+        nameTitle.setTypeface(Typeface.createFromAsset(getAssets(), "LuckiestGuy.ttf"));
+        nameInput.setTypeface(Typeface.createFromAsset(getAssets(), "LuckiestGuy.ttf"));
     }
 
     @Override
@@ -61,4 +81,25 @@ public class Introduction extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void onNextClicked(View v) {
+        //viewFlipper.showNext();
+    }
+
+    public void onBackClicked(View v) {
+        viewFlipper.showPrevious();
+        backBtn.setVisibility(View.GONE);
+        nextBtn.setVisibility(View.GONE);
+    }
+    public void onRandomNameClicked(View v) {
+        nameInput.setText("Ronald");
+    }
+    public void onSignUpClicked(View v) {
+        viewFlipper.showNext();
+        backBtn.setVisibility(View.VISIBLE);
+        nextBtn.setVisibility(View.VISIBLE);
+        nameInput.clearFocus();
+    }
+
+
 }

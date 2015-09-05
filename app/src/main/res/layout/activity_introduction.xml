@@ -7,163 +7,258 @@
     tools:context="edu.asu.aspira.Introduction"
     android:background="@drawable/landing_bg">
 
-    <RelativeLayout
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/text_box" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView2"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/text_box" />
+    <ViewFlipper
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/introViewFlipper" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome Fearless Astronaut!"
-            android:id="@+id/introTitleText"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:textSize="57dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textColor="#ffc14e28"
-            android:layout_marginRight="150dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ARE YOU READY TO EXPLORE A STRANGE NEW Galaxy?!? "
-            android:id="@+id/introTitleText2"
-            android:layout_centerHorizontal="true"
-            android:textSize="21dp"
-            android:textIsSelectable="false"
-            android:layout_below="@+id/introTitleText"
-            android:textColor="#ffffffff" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WE HERE AT SPACE COMMAND HAVE HEARD THAT YOU MIGHT HAVE SOME SPECIAL ABILITIES TO HELP US IN OUR QUEST. WHAT SPECIAL ABILITIES, YOU ASK?"
-            android:id="@+id/introTitleText3"
-            android:layout_below="@+id/introTitleText2"
-            android:textSize="21dp"
-            android:gravity="center"
-            android:layout_centerHorizontal="true"
-            android:layout_marginRight="150dp"
-            android:textIsSelectable="false"
-            android:layout_marginTop="5dp"
-            android:textColor="#ffffffff" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WELL, WE’VE BEEN SEARCHING FAR &amp; WIDE FOR CADETS WHO ARE VERY SENSITIVE TO THE ENVIRONMENT AROUND THEM. "
-            android:id="@+id/introTitleText4"
-            android:layout_below="@+id/introTitleText3"
-            android:layout_centerHorizontal="true"
-            android:textSize="21dp"
-            android:textIsSelectable="false"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:layout_marginRight="300dp"
-            android:textAlignment="center"
-            android:textColor="#ffffffff" />
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/introTitleText4"
-            android:gravity="center_horizontal"
-            android:id="@+id/weirdLayout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/signUpLayout">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="YOUR ASTHMA MAKES "
-                android:id="@+id/introTitleText5"
-                android:layout_below="@+id/introTitleText4"
+                android:text="Welcome Fearless Astronaut!"
+                android:id="@+id/introTitleText"
+                android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:textSize="21dp"
-                android:textIsSelectable="false"
-                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:textSize="57dp"
                 android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#ffc14e28"
+                android:layout_marginRight="150dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ARE YOU READY TO EXPLORE A STRANGE NEW Galaxy?!? "
+                android:id="@+id/introTitleText2"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"
+                android:textIsSelectable="false"
+                android:layout_below="@+id/introTitleText"
+                android:textColor="#ffffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WE HERE AT SPACE COMMAND HAVE HEARD THAT YOU MIGHT HAVE SOME SPECIAL ABILITIES TO HELP US IN OUR QUEST. WHAT SPECIAL ABILITIES, YOU ASK?"
+                android:id="@+id/introTitleText3"
+                android:layout_below="@+id/introTitleText2"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="175dp"
+                android:textIsSelectable="false"
+                android:layout_marginTop="5dp"
+                android:textColor="#ffffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WELL, WE’VE BEEN SEARCHING FAR &amp; WIDE FOR CADETS WHO ARE VERY SENSITIVE TO THE ENVIRONMENT AROUND THEM. "
+                android:id="@+id/introTitleText4"
+                android:layout_below="@+id/introTitleText3"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"
+                android:textIsSelectable="false"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_marginRight="300dp"
+                android:textAlignment="center"
+                android:textColor="#ffffffff" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/introTitleText4"
+                android:gravity="center_horizontal"
+                android:id="@+id/weirdLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YOUR ASTHMA MAKES "
+                    android:id="@+id/introTitleText5"
+                    android:layout_below="@+id/introTitleText4"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20dp"
+                    android:textIsSelectable="false"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#ffffffff"
+                    android:layout_toLeftOf="@+id/introTitleText6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YOU EXTRA SPECIAL"
+                    android:id="@+id/introTitleText6"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20dp"
+                    android:textIsSelectable="false"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#ff0f74bb"
+                    android:layout_below="@+id/introTitleText4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=", AND "
+                    android:id="@+id/introTitleText7"
+                    android:layout_below="@+id/introTitleText4"
+                    android:layout_toEndOf="@+id/introTitleText6"
+                    android:textSize="20dp"
+                    android:textColor="#ffffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PERFECT"
+                    android:id="@+id/introTitleText8"
+                    android:layout_below="@+id/introTitleText4"
+                    android:layout_toEndOf="@+id/introTitleText7"
+                    android:textColor="#ff0f74bb"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" TO HEAD UP OUR "
+                    android:id="@+id/introTitleText9"
+                    android:layout_below="@+id/introTitleText4"
+                    android:layout_toEndOf="@+id/introTitleText8"
+                    android:textSize="20dp"
+                    android:textColor="#ffffffff" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="217dp"
+                android:layout_height="75dp"
+                android:text="Sign me up!"
+                android:id="@+id/signUpBtn"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_selector"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/introTitleText10"
                 android:textColor="#ffffffff"
-                android:layout_toLeftOf="@+id/introTitleText6" />
+                android:textSize="32dp"
+                android:onClick="onSignUpClicked" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="YOU EXTRA SPECIAL"
-                android:id="@+id/introTitleText6"
+                android:text="EXPLORATION TEAM and RUN THIS AMAZING NEW TECHNOLOGY! "
+                android:id="@+id/introTitleText10"
                 android:layout_centerHorizontal="true"
-                android:textSize="21dp"
-                android:textIsSelectable="false"
+                android:layout_below="@+id/weirdLayout"
+                android:textSize="20dp"
+                android:textColor="#ffffffff"
+                android:layout_marginTop="-5dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/nameLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name Your Astronaut"
+                android:id="@+id/nameTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:textSize="60dp"
+                android:textColor="#ffc14e28" />
+
+            <ImageView
+                android:layout_width="225dp"
+                android:layout_height="325dp"
+                android:id="@+id/imageView3"
+                android:src="@drawable/astronaut_shadow"
+                android:layout_marginTop="75dp"
+                android:layout_marginLeft="200dp" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:id="@+id/nameInput"
+                android:layout_alignTop="@+id/imageView3"
+                android:layout_alignEnd="@+id/nameTitle"
+                android:background="@drawable/tb_bg"
+                android:autoText="false"
                 android:gravity="center"
+                android:layout_marginTop="50dp"
+                android:paddingLeft="-15dp"
                 android:textAlignment="center"
-                android:textColor="#ff0f74bb"
-                android:layout_below="@+id/introTitleText4" />
+                android:textSize="36dp"
+                android:textColor="#ff1174bc"
+                android:layout_marginRight="30dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=", AND "
-                android:id="@+id/introTitleText7"
-                android:layout_below="@+id/introTitleText4"
-                android:layout_toEndOf="@+id/introTitleText6"
-                android:textSize="21dp"
-                android:textColor="#ffffffff" />
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="Random Name"
+                android:id="@+id/randomBtn"
+                android:layout_alignParentBottom="false"
+                android:background="@drawable/btn_selector"
+                android:textColor="#FFFFFF"
+                android:textSize="22dp"
+                android:layout_alignParentLeft="false"
+                android:layout_below="@+id/nameInput"
+                android:layout_alignLeft="@+id/nameInput"
+                android:layout_marginLeft="20dp"
+                android:onClick="onRandomNameClicked" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PERFECT"
-                android:id="@+id/introTitleText8"
-                android:layout_below="@+id/introTitleText4"
-                android:layout_toEndOf="@+id/introTitleText7"
-                android:textColor="#ff0f74bb"
-                android:textSize="21dp" />
+        </RelativeLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" TO HEAD UP OUR "
-                android:id="@+id/introTitleText9"
-                android:layout_below="@+id/introTitleText4"
-                android:layout_toEndOf="@+id/introTitleText8"
-                android:textSize="21dp"
-                android:textColor="#ffffffff" />
+    </ViewFlipper>
 
-        </LinearLayout>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="← Back"
+        android:id="@+id/backBtn"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_selector"
+        android:layout_marginBottom="50dp"
+        android:textColor="#FFFFFF"
+        android:textSize="32dp"
+        android:onClick="onBackClicked"
+        android:layout_marginLeft="175dp"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone" />
 
-        <Button
-            android:layout_width="217dp"
-            android:layout_height="75dp"
-            android:text="Sign me up!"
-            android:id="@+id/signUpBtn"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/btn_selector"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/introTitleText10"
-            android:textColor="#ffffffff"
-            android:textSize="32dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="EXPLORATION TEAM and RUN THIS AMAZING NEW TECHNOLOGY! "
-            android:id="@+id/introTitleText10"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/weirdLayout"
-            android:textSize="21dp"
-            android:textColor="#ffffffff"
-            android:layout_marginTop="-5dp" />
-
-    </RelativeLayout>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Next →"
+        android:id="@+id/nextBtn"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_selector"
+        android:layout_marginBottom="50dp"
+        android:textColor="#FFFFFF"
+        android:textSize="32dp"
+        android:onClick="onNextClicked"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="175dp"
+        android:visibility="gone" />
 
 </RelativeLayout>
